@@ -1,0 +1,26 @@
+Tema: Desarrollo de software, soluciones digitales
+
+Home ( index.html ):
+Hero Section: Imagen o carrusel de presentación con título de impacto y llamado a la
+acción (CTA).
+3 Tiras / Franjas resumidas:Resumen de Servicios prestados.
+Resumen de Trabajos / Clientes destacados.
+Resumen institucional ("Sobre la empresa")
+
+El Equipo ( equipo.html ):
+Descripción de la empresa (misión, visión y valores).
+Tarjetas (cards) con las fichas de los integrantes del equipo (mínimo 3 integrantes con
+foto, rol y redes).
+
+Servicios ( servicios.html ):
+Detalle completo de las prestaciones ofrecidas (mínimo 3 servicios maquetados con
+Flexbox/Grid).
+
+Trabajos / Clientes ( trabajos.html ):
+Galería o catálogo visual de los proyectos o clientes principales (mínimo 5
+trabajos/clientes estructurados con CSS Grid).
+
+Contacto ( contacto.html ):
+Datos directos de contacto (teléfono, email, dirección física y mapa).
+Enlaces a redes sociales.
+Formulario de contacto accesible (Campos: Nombre, Email, Asunto y Mensaje).

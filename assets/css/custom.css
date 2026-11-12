@@ -1,0 +1,525 @@
+/**
+ * Nexo Digital — estilos de apoyo
+ * Extiende Moderna sin modificar main.css
+ */
+
+/* ---------- Utilidades ---------- */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--nav-font);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.section-intro {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--default-color);
+}
+
+/* ---------- Hero ---------- */
+.hero .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.hero .btn-ghost {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  line-height: 1;
+  transition: 0.3s;
+}
+
+.hero .btn-ghost:hover {
+  background: #fff;
+  border-color: #fff;
+  color: var(--heading-color);
+}
+
+/* Botón de contorno reutilizable fuera del hero */
+.btn-line {
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  border: 2px solid var(--accent-color);
+  color: var(--heading-color);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1;
+  transition: 0.3s;
+}
+
+.btn-line:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+/* ---------- Franjas / tarjetas ---------- */
+.strip-card {
+  height: 100%;
+  background: var(--surface-color);
+  border: 1px solid rgba(30, 67, 86, 0.08);
+  border-radius: 14px;
+  padding: 28px 24px;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.strip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(30, 67, 86, 0.12);
+  border-color: rgba(104, 164, 196, 0.5);
+}
+
+.strip-card .icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(104, 164, 196, 0.14);
+  color: var(--accent-color);
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+
+.strip-card h3 {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.strip-card h3 a {
+  color: var(--heading-color);
+}
+
+.strip-card h3 a:hover {
+  color: var(--accent-color);
+}
+
+.strip-card p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.strip-card .card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+/* ---------- Casos de éxito ---------- */
+.case-card {
+  height: 100%;
+  background: var(--surface-color);
+  border: 1px solid rgba(30, 67, 86, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.case-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 44px rgba(30, 67, 86, 0.14);
+}
+
+.case-card .case-img {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: #e9f0f5;
+}
+
+.case-card .case-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.case-card:hover .case-img img {
+  transform: scale(1.05);
+}
+
+.case-card .case-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(30, 67, 86, 0.9);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 50px;
+}
+
+.case-card .case-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.case-card .case-client {
+  font-family: var(--nav-font);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.case-card h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.case-card p {
+  font-size: 15px;
+  margin: 0;
+}
+
+.case-card .case-results {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0;
+  display: grid;
+  gap: 6px;
+}
+
+.case-card .case-results li {
+  font-size: 14px;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.case-card .case-results i {
+  color: var(--accent-color);
+  margin-top: 3px;
+}
+
+.case-card .case-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+.case-card .case-tech span {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 50px;
+  background: #eef5f9;
+  color: #43657a;
+}
+
+/* ---------- Rejilla de casos (CSS Grid) ---------- */
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+@media (max-width: 991px) {
+  .cases-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .cases-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- Servicios detallados ---------- */
+.service-detail {
+  height: 100%;
+  background: var(--surface-color);
+  border: 1px solid rgba(30, 67, 86, 0.08);
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.service-detail:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(30, 67, 86, 0.12);
+}
+
+.service-detail .service-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(104, 164, 196, 0.14);
+  color: var(--accent-color);
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+
+.service-detail h3 {
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.service-detail > p {
+  font-size: 15px;
+}
+
+.service-detail h4 {
+  font-family: var(--nav-font);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--heading-color);
+  margin: 18px 0 8px;
+}
+
+.service-detail ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 7px;
+}
+
+.service-detail ul li {
+  font-size: 14px;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.service-detail ul li i {
+  color: var(--accent-color);
+  margin-top: 3px;
+}
+
+.service-detail .service-note {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(30, 67, 86, 0.08);
+  font-size: 14px;
+}
+
+.service-detail .service-note strong {
+  color: var(--heading-color);
+}
+
+/* ---------- Proceso ---------- */
+.process-step {
+  height: 100%;
+  background: var(--surface-color);
+  border-radius: 14px;
+  padding: 28px 24px;
+  border-top: 3px solid var(--accent-color);
+  box-shadow: 0 10px 30px rgba(30, 67, 86, 0.06);
+}
+
+.process-step .step-num {
+  font-family: var(--heading-font);
+  font-size: 34px;
+  font-weight: 700;
+  color: rgba(104, 164, 196, 0.4);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.process-step h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.process-step p {
+  font-size: 15px;
+  margin: 0;
+}
+
+/* ---------- Valores ---------- */
+.value-card {
+  height: 100%;
+  padding: 26px 24px;
+  border-radius: 14px;
+  background: var(--surface-color);
+  border: 1px solid rgba(30, 67, 86, 0.08);
+}
+
+.value-card i {
+  font-size: 26px;
+  color: var(--accent-color);
+}
+
+.value-card h3 {
+  font-size: 18px;
+  margin: 14px 0 8px;
+}
+
+.value-card p {
+  font-size: 15px;
+  margin: 0;
+}
+
+/* ---------- CTA ---------- */
+.cta-band {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #1e4356, #2f6a85);
+  color: #fff;
+}
+
+.cta-band h2 {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.cta-band p {
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 0;
+}
+
+.cta-band .btn-cta {
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: 50px;
+  background: #fff;
+  color: var(--heading-color);
+  font-weight: 600;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.cta-band .btn-cta:hover {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+/* ---------- Contacto ---------- */
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(30, 67, 86, 0.2);
+  color: var(--heading-color);
+  font-size: 19px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.contact .form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 6px;
+}
+
+.contact .form-check-label {
+  font-size: 14px;
+}
+
+.contact .info-item {
+  padding: 26px 20px;
+}
+
+.contact .info-item h3 {
+  font-size: 17px;
+}
+
+.contact .info-item p {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 15px;
+}
+
+.contact .info-item a {
+  color: var(--default-color);
+}
+
+.contact .info-item a:hover {
+  color: var(--accent-color);
+}
+
+/* ---------- FAQ ---------- */
+.faq .accordion-item {
+  border: 1px solid rgba(30, 67, 86, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  background: var(--surface-color);
+}
+
+.faq .accordion-button {
+  font-family: var(--nav-font);
+  font-weight: 600;
+  color: var(--heading-color);
+  background: transparent;
+  box-shadow: none;
+  font-size: 16px;
+}
+
+.faq .accordion-button:not(.collapsed) {
+  color: var(--accent-color);
+  background: rgba(104, 164, 196, 0.08);
+}
+
+.faq .accordion-body {
+  font-size: 15px;
+}
+
+/* ---------- Ajustes responsive ---------- */
+@media (max-width: 575px) {
+  .hero .btn-get-started {
+    padding: 10px 24px;
+    font-size: 13px;
+  }
+
+  .hero .btn-ghost {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .case-card .case-body,
+  .service-detail {
+    padding: 22px;
+  }
+}
